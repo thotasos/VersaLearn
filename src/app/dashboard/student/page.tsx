@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { BookOpen, Calendar, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { StudentCalendar } from "@/components/student-calendar";
-import { formatDate } from "@/lib/utils";
 
 export default async function StudentDashboard() {
   const session = await auth();

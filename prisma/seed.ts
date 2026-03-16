@@ -111,6 +111,8 @@ async function main() {
     },
   });
 
+  // Courses created for future use - no lessons/enrollments yet
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const course4 = await prisma.course.create({
     data: {
       title: "Node.js Backend Masterclass",
@@ -124,6 +126,7 @@ async function main() {
     },
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const course5 = await prisma.course.create({
     data: {
       title: "Machine Learning Fundamentals",
@@ -138,6 +141,7 @@ async function main() {
     },
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const course6 = await prisma.course.create({
     data: {
       title: "CSS Mastery & Modern Layouts",
