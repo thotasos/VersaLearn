@@ -142,7 +142,9 @@ export default async function CoursePage({
                 </p>
               </div>
               {session?.user ? (
-                session.user.id !== course.tutorId && (
+                session.user.id === course.tutorId ? (
+                  <p className="text-sm text-zinc-500">You are the instructor</p>
+                ) : (
                   <EnrollButton
                     courseId={course.id}
                     isEnrolled={isEnrolled}

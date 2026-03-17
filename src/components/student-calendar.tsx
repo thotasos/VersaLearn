@@ -38,7 +38,12 @@ export function StudentCalendar({
   async function handleCreate(formData: FormData) {
     setCreating(true);
     formData.set("color", selectedColor);
-    await createCalendarEvent(formData);
+    const result = await createCalendarEvent(formData);
+    if (result?.error) {
+      alert(result.error);
+      setCreating(false);
+      return;
+    }
     setCreating(false);
     setShowForm(false);
   }
