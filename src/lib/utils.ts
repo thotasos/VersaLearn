@@ -22,12 +22,13 @@ export function formatDate(date: Date | string): string {
 }
 
 export function getInitials(name: string): string {
+  if (!name || name.trim().length === 0) return "?";
   return name
     .split(" ")
     .map((n) => n[0])
     .join("")
     .toUpperCase()
-    .slice(0, 2);
+    .slice(0, 2) || "?";
 }
 
 export function truncate(text: string, length: number): string {
